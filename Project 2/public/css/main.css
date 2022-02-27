@@ -1,0 +1,36 @@
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root{
+    font-size: 10px;
+    --Navy: #001f3f;
+    --Blue: #0074D9;
+    --Teal: #39CCCC;
+}
+
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+    margin: 1rem;
+    padding: 0;
+}
+#link{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+#link:hover{
+    transform: scale(1.1);
+}

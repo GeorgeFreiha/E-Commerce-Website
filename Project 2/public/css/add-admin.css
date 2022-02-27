@@ -1,0 +1,7 @@
+#register-form{
+    display: flex !important;
+}
+
+.add-admin-header{
+    border-bottom: 1px solid black;
+}

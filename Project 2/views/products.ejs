@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andada+Pro&family=Bebas+Neue&family=Festive&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/navigation.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/contactus.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Electrifying</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs', {account: account}) %>
+
+    <div class="products" id="products">
+      <h1 class="title">Products</h1>
+
+      <div class="product-grid">
+        <% product.forEach(p => { %>
+        <div
+          class="product-card card1 moveRight"
+          style="background-image: url(<%- p.image%>)"
+        >
+          <div class="product-info">
+            <div class="product-description">
+              <h3 class="product-name"><%- p.name%></h3>
+              <h3 class="price"><%- p.price%>$</h3>
+              <button id="<%- p.name%>" class="add-btn" onclick="addToList(this.id)">+</button>
+
+            </div>
+
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+
+    <%- include('./partials/footer.ejs') %>
+    <script>
+      function addToList(id){
+       console.log(id)
+        const xhttp = new XMLHttpRequest();
+        xhttp.open(
+          "get",
+          `http://localhost:3030/add-product-to-cart?productName=${id}`
+        );
+        xhttp.send();
+        alert("Product Added")
+        // xhttp.onload = function () {
+        //     const demo = document.getElementById("demo");
+        //     demo.innerText = "Sent Successfully, Go check on server side!";
+        // };
+    
+    }
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andada+Pro&family=Bebas+Neue&family=Festive&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
+
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/navigation.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/modify.css" />
+    <title>Electrifying</title>
+  </head>
+  <body>
+    <div
+      class="addProducts"
+      style="border: 1px solid black; padding: 2rem; margin: 2rem"
+    >
+      <h1>Add Product</h1>
+      <label for="name"
+        >Name:
+        <input type="text" name="name" id="name" />
+      </label>
+      <select name="type" id="type">
+        <option value="Phone">Phone</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Gadget">Gadget</option>
+      </select>
+      <label for="price">
+        <input type="number" name="price" id="price" />
+      </label>
+      <label for="url"
+        >Image URL
+        <input type="string" name="url" id="url" />
+      </label>
+
+      <button onclick="addProduct()">Add</button>
+    </div>
+
+    <div
+      class="deleteProduct"
+      style="border: 1px solid black; padding: 2rem; margin: 2rem"
+    >
+      <h1>Delete Product</h1>
+      <label for="name2"
+        >Name:
+        <input
+          type="text"
+          name="name"
+          id="name2"
+          placeholder="Enter exact name of the product"
+          style="width: 250px"
+        />
+      </label>
+
+      <button onclick="deleteProduct()">Delete</button>
+    </div>
+
+    <div
+      class="deleteProduct"
+      style="border: 1px solid black; padding: 2rem; margin: 2rem"
+    >
+      <h1>Change Price of Product</h1>
+      <label for="name3"
+        >Name:
+        <input
+          type="text"
+          name="name"
+          id="name3"
+          placeholder="Enter exact name of the product"
+          style="width: 250px"
+        />
+      </label>
+      <label for="price2"
+        >New Price:
+        <input
+          type="number"
+          name="price2"
+          id="price2"
+          placeholder="Enter new price"
+          style="width: 250px"
+        />
+      </label>
+
+      <button onclick="modifyPrice()">Delete</button>
+    </div>
+    <script>
+      function addProduct() {
+        console.log("hello");
+        const xhttp = new XMLHttpRequest();
+        xhttp.open("post", "http://localhost:3030/admin-panel/modify-products");
+        xhttp.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        );
+
+        var name = document.getElementById("name").value;
+        var type = document.getElementById("type").value;
+        var price = document.getElementById("price").value;
+        var url = document.getElementById("url").value;
+
+        document.getElementById("name").value = "";
+        document.getElementById("price").value = "";
+        document.getElementById("url").value = "";
+
+        console.log(name);
+        xhttp.send(`name=${name}&type=${type}&price=${price}&image=${url}`);
+        alert("Product Added");
+      }
+
+      function modifyPrice() {
+        console.log("hello");
+        const xhttp = new XMLHttpRequest();
+        let name = document.getElementById("name3").value;
+        let price = document.getElementById("price2").value;
+
+        console.log(name);
+        var sentString = `http://localhost:3030/admin-panel/modify-products/modify-price?name=${name}&price=${price}`;
+
+        console.log(sentString);
+        xhttp.open("get", sentString);
+
+        document.getElementById("name3").value = "";
+        document.getElementById("price2").value = "";
+
+        console.log(name);
+        xhttp.send();
+        alert("Price Changed");
+      }
+
+      function deleteProduct() {
+        console.log("hello");
+        const xhttp = new XMLHttpRequest();
+        var name = document.getElementById("name2").value;
+        console.log(name);
+        var sentString = `http://localhost:3030/admin-panel/modify-products/delete?name=${name}`;
+
+        console.log(sentString);
+        xhttp.open("get", sentString);
+
+        document.getElementById("name2").value = "";
+
+        console.log(name);
+        xhttp.send();
+        alert("Product Deleted");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.options{
+    width: 100%;
+    background-color: whitesmoke;
+    height: 30rem;
+    margin: .5rem;
+    padding: 3rem;
+    font-size: 4rem;
+}
+
+.ap-ul .ap-li{
+    list-style: none;
+    
+}
+.ap-ul .ap-li a{
+    color: black;
+    text-decoration: none;    
+}
+

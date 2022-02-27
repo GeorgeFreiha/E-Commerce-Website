@@ -1,0 +1,182 @@
+/* Colors
+Navy: #001f3f
+Blue: #0074D9
+Teal: #39CCCC */
+
+
+
+
+
+
+
+/* @media screen and (max-width: 450px) {
+    body{
+        margin: 0;
+    }
+   
+    .title{
+        font-size: 5rem !important;
+    }
+
+    .title2{
+        font-size: 4rem !important;
+    }
+   
+} */
+
+
+
+
+
+
+
+/* About Us Start */
+/* 
+@media screen and (max-width: 1200px) {
+    .logo img{
+        display: none;
+    }
+
+    
+
+    .card{
+        margin-top: 5rem;
+        height: 30rem;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
+    .card img{
+        display: none;
+    }
+    .card h3{
+       flex: none;
+       border-bottom: 1px solid var(--Navy);
+    }
+    .card p{
+        flex: none;
+        align-self: center;
+        font-size: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+      .card h3{
+          font-size: 2rem;
+      }
+  }
+
+  @media screen and (max-width: 670px) {
+      .card{
+          height: 35rem;
+
+      }
+
+      .card h3{
+          font-size: 2rem;
+          text-align: center;
+
+      }
+
+      .card p{
+          font-size: 2rem;
+      }
+  }
+
+  @media screen and (max-width: 450px) {
+    .aboutUs{
+        overflow: hidden;
+        height: 150rem;
+    }  
+
+    .card{
+        flex: none;
+    }
+    
+    .aboutUs h1{
+          font-size: 5rem;
+
+      }
+
+      .details{
+          flex-direction: column;
+          text-align: center;
+      }
+}
+About Us End */
+
+/* Products start */
+
+
+/* @media screen and (max-width: 1200px) {
+    .products{
+        height: 100rem;
+        padding-bottom: 3rem;
+    }
+    .product-grid{
+        grid-template-columns: repeat(2, 2fr);
+       grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .product-card{
+        height: 25rem;
+    width: 30rem;
+    }
+
+    .product-description{
+        visibility: visible;
+        opacity: 1;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 670px) {
+
+    .products{
+        height: 200rem;
+        padding-bottom: 3rem;
+    }
+    .product-grid{
+        grid-template-columns: repeat(1, 2fr);
+       grid-template-rows: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .products{
+            margin: 0;
+            padding: 2rem;
+    }
+} */
+
+/* Products end */
+
+
+/* Contact Us Start */
+
+/* @media screen and (max-width: 450px) {
+    .contactUs{
+        height: 10rem;
+        margin: 0;
+        padding: 0;
+    }
+    .contactUs ul{
+        font-size: 2.8rem;
+    }
+} */
+/* Contact Us End */
+
+.moveRight{
+    position: relative; 
+    animation: moveToRight 3s ease-in-out;
+}
+
+.moveLeft{
+    position: relative;
+    animation: moveToLeft 3s ease-in;
+
+}
+
+    

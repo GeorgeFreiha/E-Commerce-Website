@@ -1,0 +1,144 @@
+:root{
+    font-size: 10px;
+    --Navy: #001f3f;
+    --Blue: #0074D9;
+    --Teal: #39CCCC;
+}
+
+.navigation{
+    display: flex;
+     background-color: var(--Navy);
+     color: white;
+     margin-bottom: 1rem;
+     padding: 1rem;
+     height: 7rem;
+     justify-content: space-between;
+     font-size: 2rem;
+     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+ }
+ 
+ .inner_logo{
+    display: flex;
+    align-items: center;
+    
+    font-family: 'Festive', cursive;
+    font-size: 3rem;
+ }
+ .logo{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     flex: 1;
+ }
+
+ .name
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 7;
+    border-radius: 3rem;
+    border: 1px solid white;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+}
+ 
+ 
+ .logo img{
+     margin-right: 1rem;
+     height: 100%;
+     width: 7%;
+ }
+ 
+ .nav_list{
+     display: flex;
+     align-items: center;
+ 
+ }
+ .nav_list ul{
+     display: flex;
+     list-style: none;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+ 
+ .list_item{
+     padding: .5rem;
+     text-transform: uppercase;
+     font-family: 'Andada Pro', serif;
+     font-size: 1.8rem;
+ }
+ 
+ 
+ .list_item a{
+     text-decoration: none;
+     color: white;
+ 
+     padding: 0rem 1rem;
+ }
+
+ /* the hover effect was done by this guy, but I edited it to fit my project 
+refereence: https://www.youtube.com/watch?v=yks0aEfaETs */
+ul li{
+    position: relative;
+
+}
+ul li:hover{
+    text-shadow: 0px 0px 5px white;
+   cursor: pointer;
+
+}
+
+ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: white;
+    box-shadow: 0px 0px 2px black;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -1px;
+    right: 0%;
+    transition: .2s;
+}
+
+ul li:hover::after{
+    width: 98%;
+    left: 0%;
+}
+@media screen and (max-width: 900px) {
+    .logo img{
+        display: none;
+        
+    }
+}
+    @media screen and (max-width: 670px) {
+    .navigation{
+        flex-direction: column;
+        height: 10rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo{
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body{
+        margin: 0;
+    }
+    .navigation{
+        padding: 1.3rem;
+        margin-bottom: 0;
+
+    }
+
+
+    .list_item{
+        font-size: 1.2rem;
+    }
+}
+/* Hover effect end */

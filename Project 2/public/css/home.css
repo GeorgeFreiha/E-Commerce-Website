@@ -1,0 +1,98 @@
+/* Home CSS start */
+.home{
+    
+    background-image: url(../images/home.jpg);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    height: 68rem;
+    font-family: 'Festive', cursive;
+    color: white;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+    text-transform: capitalize;
+    letter-spacing: .4rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin-bottom: 1rem;
+}
+@media screen and (max-width: 450px) {
+.home{
+    margin-bottom: 0;
+    }
+}
+
+.title{
+    font-size: 10rem;
+    position: relative;
+    animation: upDown 1s ease-in-out;
+    transition: all .2s;
+    flex: 3;
+    font-family: 'Bebas Neue', cursive;
+    color: var(--Navy);
+    font-size: 8rem;
+    text-transform: capitalize;
+    letter-spacing: 1rem;
+    margin-bottom: 1rem;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+    animation: upDown 1s ease-in;   
+    -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
+}
+
+.title2{
+    font-size: 5rem;
+    position: relative;
+    animation: downUp 1s ease-in-out;
+    -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
+}
+
+@media screen and (max-width: 670px) {
+    body{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 450px) {
+ 
+   
+    .title{
+        font-size: 5rem !important;
+    }
+
+    .title2{
+        font-size: 4rem !important;
+    }
+   
+}
+
+/* Home CSS End */
+
+.news{
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    margin: 1rem 0rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.news img{
+    height: 30rem;
+    width: 40rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+.news-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 1rem;
+}
